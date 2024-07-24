@@ -1,14 +1,14 @@
 package bank;
 
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.sql.SQLException;
-import java.time.LocalDate;
 
 
 
@@ -16,7 +16,11 @@ import java.time.LocalDate;
 
 @WebServlet("/register")
 public class AdmindashboardServlet extends HttpServlet {
-    private AdmindashboardDAO customerDAO;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private AdmindashboardDAO customerDAO;
 
     public void init() {
         customerDAO = new AdmindashboardDAO();
